@@ -2,14 +2,14 @@
 
 - name: disable qxl
   hosts:
-      - routers
-      - hosts
+    - routers
+    - hosts
   gather_facts: yes
   become: yes
   tasks:
-      - include_role:
-            name: kypo-disable-qxl
-        when: ansible_os_family == 'Debian'
+    - include_role:
+        name: disable-qxl
+      when: ansible_os_family == 'Debian'
 
 - name: set up server
   hosts: server
@@ -21,12 +21,11 @@
   hosts: client
   become: yes
   roles:
-    - name: kypo-user-access
-      kypo_user_access_username: user
-      kypo_user_access_password: Password123
-      kypo_user_access_sudo: True
+    - name: user-access
+      user_access_username: user
+      user_access_password: Password123
+      user_access_sudo: True
     - name: client
-
 
 - name: set up command logging
   hosts: hosts
@@ -34,5 +33,4 @@
   roles:
     - role: sandbox-logging
       slf_destination_port: '{% if hostvars["man"] is defined -%} 514 {%- else -%} 515 {%- endif %}'
-
 ...

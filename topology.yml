@@ -1,22 +1,22 @@
-name: kypo-library-demo-training-adaptive
+name: library-demo-training-adaptive
 
 hosts:
   - name: server
     base_box:
-      image: ubuntu-focal-x86_64
+      image: ubuntu-noble-x86_64
       man_user: ubuntu
     flavor: standard.small
 
   - name: client
     base_box:
-      image: ubuntu-focal-x86_64
+      image: ubuntu-noble-x86_64
       man_user: ubuntu
     flavor: standard.small
 
 routers:
   - name: router
     base_box:
-      image: debian-9-x86_64
+      image: debian-12-x86_64
       man_user: debian
     flavor: standard.small
 
@@ -29,19 +29,19 @@ networks:
     cidr: 192.168.30.0/24
 
 net_mappings:
-    - host: server
-      network: server-switch
-      ip: 192.168.20.5
-    - host: client
-      network: client-switch
-      ip: 192.168.30.5
+  - host: server
+    network: server-switch
+    ip: 192.168.20.5
+  - host: client
+    network: client-switch
+    ip: 192.168.30.5
 
 router_mappings:
-    - router: router
-      network: server-switch
-      ip: 192.168.20.1
-    - router: router
-      network: client-switch
-      ip: 192.168.30.1
+  - router: router
+    network: server-switch
+    ip: 192.168.20.1
+  - router: router
+    network: client-switch
+    ip: 192.168.30.1
 
 groups: []

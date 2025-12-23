@@ -7,6 +7,25 @@
     password: '{{ password | password_hash(''sha512'') }}'
     shell: '/bin/bash'
 
+- name: Enable SSH password authentication
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#?PasswordAuthentication'
+    line: 'PasswordAuthentication yes'
+
+- name: Ensure SSH allows the training user
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^AllowUsers'
+    line: 'AllowUsers {{ username }} ubuntu'
+    create: yes
+
+- name: Restart SSH
+  service:
+    name: ssh
+    state: restarted
+
+
 - name: Install packages
   apt:
     pkg:

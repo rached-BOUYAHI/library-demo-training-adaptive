@@ -39,16 +39,16 @@ net_mappings:
 
   - host: server
     network: man-network
-    ip: 192.168.130.20
+    # NO IP HERE
 
-  # CLIENT (IMPORTANT)
+  # CLIENT
   - host: client
     network: client-switch
     ip: 192.168.30.5
 
   - host: client
     network: man-network
-    ip: 192.168.130.30
+    # NO IP HERE
 
 router_mappings:
   - router: router
@@ -61,6 +61,6 @@ router_mappings:
 
   - router: router
     network: man-network
-    ip: 192.168.130.1
+    # NO IP HERE
 
 groups: []

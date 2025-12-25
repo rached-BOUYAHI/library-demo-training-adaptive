@@ -22,7 +22,7 @@ routers:
 
 networks:
   - name: man-network
-    cidr: 192.168.130.0/24
+    cidr: 192.168.130.0/24   # MAN ONLY
 
   - name: server-switch
     cidr: 192.168.20.0/24
@@ -32,19 +32,15 @@ networks:
     cidr: 192.168.30.0/24
 
 net_mappings:
+  # SERVER
   - host: server
     network: server-switch
     ip: 192.168.20.5
 
-  - host: server
-    network: man-network
-
+  # CLIENT
   - host: client
     network: client-switch
     ip: 192.168.30.5
-
-  - host: client
-    network: man-network
 
 router_mappings:
   - router: router

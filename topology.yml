@@ -1,4 +1,4 @@
-name: demo-multipool-safe
+name: library-demo-training-adaptive
 
 hosts:
   - name: server
@@ -6,7 +6,6 @@ hosts:
       image: ubuntu-noble-x86_64
       man_user: ubuntu
     flavor: standard.small
-    hidden: true
 
   - name: client
     base_box:
@@ -22,21 +21,41 @@ routers:
     flavor: standard.small
 
 networks:
-  - name: lan
+  - name: man-network
+    cidr: 192.168.130.0/24   
+
+  - name: server-switch
+    cidr: 192.168.20.0/24
+    accessible_by_user: false
+
+  - name: client-switch
     cidr: 192.168.30.0/24
 
 net_mappings:
   - host: server
-    network: lan
-    ip: 192.168.30.10
+    network: server-switch
+    ip: 192.168.20.5
+
+  - host: server
+    network: man-network
 
   - host: client
-    network: lan
-    ip: 192.168.30.20
+    network: client-switch
+    ip: 192.168.30.5
+
+  - host: client
+    network: man-network
 
 router_mappings:
   - router: router
-    network: lan
+    network: server-switch
+    ip: 192.168.20.1
+
+  - router: router
+    network: client-switch
     ip: 192.168.30.1
+
+  - router: router
+    network: man-network
 
 groups: []

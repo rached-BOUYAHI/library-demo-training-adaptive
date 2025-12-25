@@ -38,7 +38,7 @@ net_mappings:
 
   - host: server
     network: man-network
-    ip: dhcp
+    ip: 192.168.130.20
 
   - host: client
     network: client-switch
@@ -46,7 +46,7 @@ net_mappings:
 
   - host: client
     network: man-network
-    ip: dhcp
+    ip: 192.168.130.30
 
 router_mappings:
   - router: router

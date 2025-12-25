@@ -59,6 +59,6 @@ router_mappings:
 
   - router: router
     network: man-network
-    ip: dhcp
+    ip: 192.168.130.1
 
 groups: []

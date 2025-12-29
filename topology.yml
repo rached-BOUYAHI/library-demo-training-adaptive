@@ -21,9 +21,11 @@ routers:
     flavor: standard.small
 
 networks:
+  # MANAGEMENT NETWORK (KYPO INTERNAL ONLY)
   - name: man-network
     cidr: 192.168.130.0/24
 
+  # TRAINING NETWORKS
   - name: server-switch
     cidr: 192.168.20.0/24
     accessible_by_user: false
@@ -32,21 +34,21 @@ networks:
     cidr: 192.168.30.0/24
 
 net_mappings:
+  # SERVER
   - host: server
     network: server-switch
     ip: 192.168.20.5
 
   - host: server
     network: man-network
-    ip: 192.168.130.20
 
+  # CLIENT
   - host: client
     network: client-switch
     ip: 192.168.30.5
 
   - host: client
     network: man-network
-    ip: 192.168.130.30
 
 router_mappings:
   - router: router
@@ -56,9 +58,5 @@ router_mappings:
   - router: router
     network: client-switch
     ip: 192.168.30.1
-
-  - router: router
-    network: man-network
-    ip: 192.168.130.1
 
 groups: []

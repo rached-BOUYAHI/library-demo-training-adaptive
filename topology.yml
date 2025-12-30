@@ -20,10 +20,6 @@ routers:
       man_user: debian
     flavor: standard.small
 
-wan:
-  name: wan-net
-  cidr: 10.255.255.0/24
-
 networks:
   - name: server-switch
     cidr: 10.20.1.0/24
@@ -32,6 +28,10 @@ networks:
   - name: client-switch
     cidr: 10.30.1.0/24
     accessible_by_user: true
+
+  - name: wan-net
+    cidr: 10.255.255.0/24
+    accessible_by_user: false
 
 net_mappings:
   - host: server

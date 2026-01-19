@@ -5,20 +5,20 @@ hosts:
     base_box:
       image: ubuntu-noble-x86_64
       man_user: ubuntu
-    flavor: m1.medium
+    flavor: m1.small
 
   - name: client
     base_box:
       image: ubuntu-noble-x86_64
       man_user: ubuntu
-    flavor: m1.medium
+    flavor: m1.small
 
 routers:
   - name: router
     base_box:
       image: debian-12-x86_64
       man_user: debian
-    flavor: m1.medium
+    flavor: m1.tiny
 
 networks:
   - name: server-switch

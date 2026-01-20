@@ -18,7 +18,7 @@ routers:
     base_box:
       image: debian-12-x86_64
       man_user: debian
-    flavor: m1.tiny
+    flavor: m1.small
 
 networks:
   - name: server-switch

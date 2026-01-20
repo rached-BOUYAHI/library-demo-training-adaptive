@@ -1,5 +1,5 @@
 name: library-demo-training-adaptive
-
+ 
 hosts:
   - name: server
     base_box:

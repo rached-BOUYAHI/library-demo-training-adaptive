@@ -1,8 +1,6 @@
-# CyberRangeCZ Platform Demo Training
+# Oryxcyber Platform Demo Training
 
-Adaptive game for [CyberRangeCZ Platform](https://docs.platform.cyberrange.cz/).
 
-Follow [general instructions](https://docs.platform.cyberrange.cz/basic-concepts/typical-training-workflow/training-workflow-cloud/) to set up the game.
 
 ## Game Levels Summary
 - access the sandbox
@@ -20,7 +18,5 @@ Follow [general instructions](https://docs.platform.cyberrange.cz/basic-concepts
 ## License and Credits
 [MIT License](./LICENSE)
 
-**Leading author:** Zdeněk Vydra
 
-**Contributors:** Jakub Čegan, Tomáš Sapák, Kamil Andoniadis, Igor Ignác, Juraj Paluba, Dominik Pilár, Michal Urban, Tomáš Kacvinský
 

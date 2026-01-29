@@ -1,6 +1,6 @@
 {
-  "title": "CyberRangeCZ Platform - Adaptive Demo Content",
-  "description": "The demo contains all types of phases to demonstrate the capabilities of the CyberRangeCZ Platform in adaptive training.",
+  "title": "Oryxcyber Platform - Adaptive Demo Content",
+  "description": "The demo contains all types of phases to demonstrate the capabilities of the Oryxcyber Platform in adaptive training.",
   "prerequisites": [],
   "outcomes": [
     "Scanning ports with nmap",
@@ -13,7 +13,7 @@
       "title": "Info",
       "phase_type": "INFO",
       "order": 0,
-      "content": "# Demo Summary\n\nThe demo contains all types of levels to demonstrate the training capabilities of the CyberRangeCZ Platform.\n\n**Note**: It is recommended to use the Chrome browser. In case you run into difficulties with submitting the flag, try to Log out and Log in again. \n\n| Level | Level Name | Level Type |\n|:------:|------| ------ |\n| 1. | Info | Info |\n| 2. | Finding Open Ports | Game |\n| 3. | Connecting via Telnet | Game |\n| 4. | Privilege Escalation | Game |\n| 5. | Test Example | Assessment |\n| 6. | Assessment Example | Assessment |\n\n## Info\n\nThe level contains this information page.\n\n## Finding open ports\n\nThe level provides information on how to connect to a sandbox. In general, there are two possible options. The first option is to use the platform'a GUI to connect to the machine via Spice console. The second option is to connect through SSH with a generated config file and keys.\n\nThis level's small challenge is to scan open ports.\n\n## Connecting Via Telnet\n\nThis level's challenge is to connect to the server machine without a password and discover the secret flag.\n\n## Privilege Escalation\n\nThis demo's bigger challenge is to gain root privileges and read a flag available only to a root user. Enjoy! \n\n## Test Example\n\nThe level contains a simple example of a test. Tests can be used, for example, for additional testing of students for grading purposes.\n\n## Assessment Example\n\nThe level contains a simple example of a test. For example, the tests can be used to verify the learning outcomes or for collecting feedback.\n"
+      "content": "# Demo Summary\n\nThe demo contains all types of levels to demonstrate the training capabilities of the Oryxcyber Platform.\n\n**Note**: It is recommended to use the Chrome browser. In case you run into difficulties with submitting the flag, try to Log out and Log in again. \n\n| Level | Level Name | Level Type |\n|:------:|------| ------ |\n| 1. | Info | Info |\n| 2. | Finding Open Ports | Game |\n| 3. | Connecting via Telnet | Game |\n| 4. | Privilege Escalation | Game |\n| 5. | Test Example | Assessment |\n| 6. | Assessment Example | Assessment |\n\n## Info\n\nThe level contains this information page.\n\n## Finding open ports\n\nThe level provides information on how to connect to a sandbox. In general, there are two possible options. The first option is to use the platform'a GUI to connect to the machine via Spice console. The second option is to connect through SSH with a generated config file and keys.\n\nThis level's small challenge is to scan open ports.\n\n## Connecting Via Telnet\n\nThis level's challenge is to connect to the server machine without a password and discover the secret flag.\n\n## Privilege Escalation\n\nThis demo's bigger challenge is to gain root privileges and read a flag available only to a root user. Enjoy! \n\n## Test Example\n\nThe level contains a simple example of a test. Tests can be used, for example, for additional testing of students for grading purposes.\n\n## Assessment Example\n\nThe level contains a simple example of a test. For example, the tests can be used to verify the learning outcomes or for collecting feedback.\n"
     },
     {
       "title": "Pre-game assessment",
@@ -272,7 +272,7 @@
       "phase_type": "ACCESS",
       "order": 2,
       "passkey": "start",
-      "cloud_content": "Your first task is to access the sandbox, where you will complete all following tasks. After you have successfully connected, Submit the answer **`start`**.\n\n### Sandbox access\n1. In the topology overview on the right, right-click on **`client`** and then click on **`Open Console`**, and a new pop-up window will appear. \n2. Login with username **`user`** and password **`Password123`**.\n\nAlternatively, you can use SSH to connect to the machine. SSH access makes it easier to copy-paste commands and flags, but requires more steps to set up. See [documentation](https://docs.platform.cyberrange.cz/user-guide-advanced/sandboxes/sandbox-access/#user-access) for more details.",
+      "cloud_content": "Your first task is to access the sandbox, where you will complete all following tasks. After you have successfully connected, Submit the answer **`start`**.\n\n### Sandbox access\n1. In the topology overview on the right, right-click on **`client`** and then click on **`Open Console`**, and a new pop-up window will appear. \n2. Login with username **`user`** and password **`Password123`**.\n\nAlternatively, you can use SSH to connect to the machine. SSH access makes it easier to copy-paste commands and flags, but requires more steps to set up. See [documentation] for more details.",
       "local_content": "This sandbox has not been tested for use with local sandbox."
     },
     {
@@ -475,7 +475,7 @@
           "question_type": "MCQ",
           "choices": [
             {
-              "text": "Graphical user interface of CyberRangeCZ Platform",
+              "text": "Graphical user interface of Oryxcyber Platform",
               "correct": true,
               "order": 0
             },
